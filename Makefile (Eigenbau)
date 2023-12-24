@@ -1,0 +1,6 @@
+BIN = main.exe
+SRC = $(wildcard src/*.cpp)
+CPPFLAGS = -g -std=c++17 -I include -L lib -lraylib -lopengl32 -lgdi32 -lwinmm
+
+$(BIN): $(SRC)
+	g++ -o $(BIN) $(SRC) $(CPPFLAGS)  
